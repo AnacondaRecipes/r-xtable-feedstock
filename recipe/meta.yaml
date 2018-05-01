@@ -14,16 +14,10 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/xtable/xtable_{{ version }}.tar.gz
   sha256: 1623a1cde2e130fedb46f98840c3a882f1cbb167b292ef2bd86d70baefc4280d
 
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
-
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
-
 
   # This is required to make R link correctly on Linux.
   rpaths:
