@@ -8,7 +8,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: xtable_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/xtable_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/xtable/xtable_{{ version }}.tar.gz
@@ -27,6 +26,7 @@ build:
 # Suggests: knitr, lsmeans, spdep, splm, sphet, plm, zoo, survival
 requirements:
   build:
+    - {{posix}}zip               # [win]
 
   host:
     - r-base
